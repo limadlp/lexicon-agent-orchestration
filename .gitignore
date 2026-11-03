@@ -1,0 +1,27 @@
+# Configuração local
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+/build/
+/dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# macOS
+.DS_Store
+
+# Saídas locais de tradução e gravações
+/output/*
+!/output/wizard_of_oz_amostra_pt.epub
+/slides/videos/
