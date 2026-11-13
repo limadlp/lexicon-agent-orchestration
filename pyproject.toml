@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lexicon"
+version = "0.1.0"
+description = "Stateful, parallel book translation pipeline with lexical consensus and evaluation suite"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ebooklib>=0.18",
+    "beautifulsoup4>=4.12",
+    "markdownify>=0.11",
+    "markdown>=3.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+langgraph = ["langgraph"]
+adk = ["google-adk"]
+
+[project.scripts]
+lexicon = "lexicon.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
